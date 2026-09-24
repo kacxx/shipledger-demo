@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "id": "v0.3.0",
+  "source": {
+    "kind": "github-release",
+    "ref": "https://github.com/kacxx/shipledger-demo/releases/tag/v0.3.0",
+    "fetchedAt": "2026-09-25T00:00:00Z"
+  },
+  "items": [
+    {
+      "id": "#3",
+      "title": "Export a report",
+      "type": "pull-request",
+      "status": "merged",
+      "tokens": [{ "matcher": "pr-ref", "token": "#3", "repo": "demo" }]
+    }
+  ],
+  "ranges": [
+    { "repo": "demo", "base": "v0.2.0", "head": "v0.3.0" }
+  ]
+}

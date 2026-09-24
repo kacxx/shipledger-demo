@@ -1,0 +1,18 @@
+{
+  "version": 1,
+  "preset": "github-oss@1",
+  "repos": [{ "name": "demo", "path": "." }],
+  "links": {
+    "repos": {
+      "demo": {
+        "commit": "https://github.com/kacxx/shipledger-demo/commit/{sha}",
+        "references": {
+          "pr-ref": {
+            "url": "https://github.com/kacxx/shipledger-demo/pull/{token}",
+            "stripPrefix": "#"
+          }
+        }
+      }
+    }
+  }
+}
