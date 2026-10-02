@@ -27,23 +27,18 @@ run() {
 }
 
 clear
-printf '%sshipledger%s — checks a release you wrote against local git\n' "$B" "$R"
+printf '%sshipledger%s — checks the release you wrote against what git actually shipped\n' "$B" "$R"
 sleep 1.5
 
-say "v0.2.0's release notes claim two PRs:"
-run "jq -r '.items[] | .id + \"  \" + .title' changesets/v0.2.0.json" 1.2
-run "git log --oneline v0.1.0..v0.2.0"
-say "Every commit in the tag is claimed, so the check passes:"
-run 'shipledger check --config shipledger.config.json --changeset changesets/v0.2.0.json; echo "exit $?"'
-run "jq -c '{verdict, violations}' verified-changeset.json" 2.5
-
-say "v0.3.0's notes claim only #3:"
+say "The v0.3.0 release notes claim one change:"
 run "jq -r '.items[] | .id + \"  \" + .title' changesets/v0.3.0.json" 1.2
-run "git log --oneline v0.2.0..v0.3.0"
-say "But the tag also contains #4, so the check fails:"
-run 'shipledger check --config shipledger.config.json --changeset changesets/v0.3.0.json; echo "exit $?"'
-run "jq -c '{verdict, violations}' verified-changeset.json" 1.2
-say "The artifact names the commit nobody claimed:"
-run "jq -r '.commits[] | select(.findings != []) | \"\\(.sha[:7]) \\(.subject)  ->  \\(.findings[0])\"' verified-changeset.json" 4
+say "Check that claim against the v0.3.0 tag:"
+run 'shipledger check --changeset changesets/v0.3.0.json; echo "exit $?"' 3
+say "Nobody announced #4. Here is what it changed:"
+run "git show --format='%h %s' feda538" 3
+say "The changelog won't let it slip through quietly either:"
+run "shipledger render changelog" 3.5
+say "Once the notes own up to it, the release checks clean:"
+run 'shipledger check --changeset changesets/v0.3.0-amended.json; echo "exit $?"' 4
 
 rm -f verified-changeset.json
