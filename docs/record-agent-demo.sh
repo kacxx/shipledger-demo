@@ -42,7 +42,7 @@ cd "$scratch/shipledger-demo" || exit 1
 git remote set-url origin https://github.com/kacxx/shipledger-demo.git
 rm -f changesets/v0.3.0*.json
 
-system='The shipledger CLI is on PATH as `shipledger`; never use npx. The skill'"'"'s cliRange is ^0.2.0. Keep the final report to about ten lines.'
+system='The shipledger CLI is on PATH as `shipledger`; never use npx. Keep the final report to about ten lines.'
 claude() {
   command claude "$@" --output-format stream-json --verbose \
     --settings "$scratch/settings.json" --append-system-prompt "$system" \

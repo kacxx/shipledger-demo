@@ -18,7 +18,7 @@ Shipledger never talks to your tracker. An agent gathers the claim, and the CLI 
 
 ![Demo: Claude Code loads the shipledger skill, reads the v0.3.0 GitHub release, writes changeset.json claiming only #3, runs shipledger doctor and check, and reports a fail with one unknown-reference on feda538, "disable rate limiting on /login (#4)"](docs/agent-demo.gif)
 
-_Recorded with the real Claude Code CLI; Claude's work is live, so its steps and wording vary between runs. `claude` in the recording wraps `claude -p` with a formatter for its stream output, a tool allowlist (the CLI, read-only `git` and `gh`, and file edits in the scratch clone) with hooks disabled, and a short appended system prompt that names the `shipledger` binary, gives the skill's CLI range and asks for a compact report. To re-record, see [docs/record-agent-demo.sh](docs/record-agent-demo.sh)._
+_Recorded with the real Claude Code CLI; Claude's work is live, so its steps and wording vary between runs. `claude` in the recording wraps `claude -p` with a formatter for its stream output, a tool allowlist (the CLI, read-only `git` and `gh`, and file edits in the scratch clone) with hooks disabled, and a short appended system prompt that names the `shipledger` binary (it is not on npm yet) and asks for a compact report. To re-record, see [docs/record-agent-demo.sh](docs/record-agent-demo.sh)._
 
 ## Run it
 
