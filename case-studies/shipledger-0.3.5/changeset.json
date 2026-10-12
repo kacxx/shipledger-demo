@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "id": "v0.3.5 release notes + hidden sections",
+  "source": {
+    "kind": "github-release",
+    "ref": "https://github.com/kacxx/shipledger/releases/tag/v0.3.5",
+    "fetchedAt": "2026-10-09T08:32:00Z"
+  },
+  "items": [
+    {
+      "id": "kacxx/shipledger#53",
+      "title": "build: add repository to the CLI package and allow googleapis in the genericity check",
+      "type": "pull_request",
+      "status": "merged",
+      "url": "https://github.com/kacxx/shipledger/pull/53",
+      "tokens": [
+        {
+          "matcher": "pr-ref",
+          "token": "#53",
+          "repo": "shipledger"
+        }
+      ]
+    },
+    {
+      "id": "kacxx/shipledger#49",
+      "title": "build(deps): drop ./ from bin path and clear npm audit findings",
+      "type": "pull_request",
+      "status": "merged",
+      "url": "https://github.com/kacxx/shipledger/pull/49",
+      "tokens": [
+        {
+          "matcher": "pr-ref",
+          "token": "#49",
+          "repo": "shipledger"
+        }
+      ]
+    },
+    {
+      "id": "kacxx/shipledger#51",
+      "title": "ci: list build commits in the release changelog",
+      "type": "pull_request",
+      "status": "merged",
+      "url": "https://github.com/kacxx/shipledger/pull/51",
+      "tokens": [
+        {
+          "matcher": "pr-ref",
+          "token": "#51",
+          "repo": "shipledger"
+        }
+      ]
+    },
+    {
+      "id": "kacxx/shipledger#50",
+      "title": "docs: explain forcing a release with Release-As",
+      "type": "pull_request",
+      "status": "merged",
+      "url": "https://github.com/kacxx/shipledger/pull/50",
+      "tokens": [
+        {
+          "matcher": "pr-ref",
+          "token": "#50",
+          "repo": "shipledger"
+        }
+      ]
+    }
+  ],
+  "ranges": [
+    {
+      "repo": "shipledger",
+      "base": "v0.3.4",
+      "head": "v0.3.5"
+    }
+  ]
+}

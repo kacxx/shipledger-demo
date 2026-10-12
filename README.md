@@ -20,6 +20,10 @@ Shipledger never talks to your tracker. An agent gathers the claim, and the CLI 
 
 _Recorded with the real Claude Code CLI; Claude's work is live, so its steps and wording vary between runs. `claude` in the recording wraps `claude -p` with a formatter for its stream output, a tool allowlist (the CLI, read-only `git` and `gh`, and file edits in the scratch clone) with hooks disabled, and a short appended system prompt that names the `shipledger` binary (it is not on npm yet) and asks for a compact report. To re-record, see [docs/record-agent-demo.sh](docs/record-agent-demo.sh)._
 
+### On a real release
+
+[case-studies/shipledger-0.3.5](case-studies/shipledger-0.3.5) runs shipledger on its own 0.3.5 release. A claim built from the release-please notes fails on two hidden `docs` and `ci` PRs, and passes once they are claimed.
+
 ## Run it
 
 Shipledger is not on npm yet. Build it, then point it at this clone.

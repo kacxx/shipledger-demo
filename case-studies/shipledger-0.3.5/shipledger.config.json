@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "preset": "github-oss@3",
+  "repos": [
+    {
+      "name": "shipledger",
+      "path": "../../../shipledger"
+    }
+  ],
+  "links": {
+    "repos": {
+      "shipledger": {
+        "commit": "https://github.com/kacxx/shipledger/commit/{sha}",
+        "references": {
+          "pr-ref": {
+            "url": "https://github.com/kacxx/shipledger/pull/{token}",
+            "stripPrefix": "#"
+          }
+        }
+      }
+    }
+  }
+}
